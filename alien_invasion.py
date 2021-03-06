@@ -28,7 +28,7 @@ class AlienInvasion:
                 if event.type == pygame.QUIT:
                     sys.exit()
 
-            # Redraw the screen during each pass through the loop.
+            # Redraw the screen during each pass through the loop with the background color.
             self.screen.fill(self.bg_color)
 
             # Make the most recently drawn screen visible.
