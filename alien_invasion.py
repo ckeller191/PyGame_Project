@@ -110,7 +110,7 @@ class AlienInvasion:
             alien = Alien(self)
             alien.x = alien_width + 2 * alien_width * alien_number
             alien.rect.x = alien.x
-            slf.aliens.add(alien)
+            self.aliens.add(alien)
 
     def _update_screen(self):
         # Redraw the screen during each pass through the loop with the background color.
