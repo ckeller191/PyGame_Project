@@ -45,8 +45,11 @@ class AlienInvasion:
                 sys.exit()
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RIGHT:
-                    # Move the ship right.
-                    self.ship.rect.x += 1
+                    # Move the ship right - using the ship.moving_right allows continuous movement
+                    self.ship.moving_right = True
+            elif event.type == pygame.KEYUP:
+                if event.key == pygame.K_RIGHT:
+                    self.ship.moving_right == False
 
     def _update_screen(self):
         # Redraw the screen during each pass through the loop with the background color.
