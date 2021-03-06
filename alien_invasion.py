@@ -34,10 +34,14 @@ class AlienInvasion:
         """Start the main loop for the game."""
         while True:
             # Watch for keyboard and mouse events.
-            for event in pygame.event.get():
-                # Code to quit the game
-                if event.type == pygame.QUIT:
-                    sys.exit()
+            self._check_events()
+
+    def _check_events(self):
+        """Respond to keypresses and mouse events."""
+        for event in pygame.event.get():
+            # Code to quit the game
+            if event.type == pygame.QUIT:
+                sys.exit()
 
             # Redraw the screen during each pass through the loop with the background color.
             self.screen.fill(self.bg_color)
