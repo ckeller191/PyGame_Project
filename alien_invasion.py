@@ -43,6 +43,10 @@ class AlienInvasion:
             # Code to quit the game
             if event.type == pygame.QUIT:
                 sys.exit()
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_RIGHT:
+                    # Move the ship right.
+                    self.ship.rect.x += 1
 
     def _update_screen(self):
         # Redraw the screen during each pass through the loop with the background color.
