@@ -122,6 +122,9 @@ class AlienInvasion:
         if pygame.sprite.spritecollideany(self.ship, self.aliens):
             self._ship_hit()
 
+        # Look for aliens hitting the bottom of the screen.
+        self._check_aliens_bottom()
+
     def _ship_hit(self):
         """Respond to the ship being hit by an alien."""
         # Decrement ships left.
